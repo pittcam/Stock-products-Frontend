@@ -36,6 +36,7 @@ export default function Pago() {
 
   return (
     <div>
+    <Navbar />
       <h2 className="text-2xl font-bold mb-4">💳 Pago</h2>
       <input
         type="text"
