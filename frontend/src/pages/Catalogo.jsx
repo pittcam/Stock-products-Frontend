@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { obtenerProductos } from "../api/productos";
 import { useCarrito } from "../context/CarritoContext";
+import Navbar from "../components/Navbar";
 
 export default function Catalogo() {
   const [productos, setProductos] = useState([]);
@@ -35,7 +36,7 @@ export default function Catalogo() {
   };
 
   return (
-    <Router>
+    <>
     <Navbar />
     <div className="container mx-auto px-4 py-8 min-h-screen">
       <h2 className="text-2xl font-bold mb-6 text-center">Catálogo de Productos</h2>
@@ -67,6 +68,6 @@ export default function Catalogo() {
         </div>
       )}
     </div>
-    </Router>
+    </>
   );
 }
